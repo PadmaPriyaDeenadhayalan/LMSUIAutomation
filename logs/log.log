@@ -1,0 +1,12 @@
+[[32mINFO [m] 2022-11-25 00:37:31,470 BaseClass.admin_user_staff_is_on_manage_user_page() - User is in Manage User Page
+[[32mINFO [m] 2022-11-25 00:37:31,476 BaseClass.admin_user_staff_clicks_add_new_user_button() - clicking Add New user Button
+[[32mINFO [m] 2022-11-25 00:37:31,484 BaseClass.admin_user_staff_should_see_the_input_fields_for_first_name_middle_name_last_name_email_adress_phone_no_address_city_state_postal_code_program_ug_program_pg_program_skill_experience_admin_user_staff_role_visa_status_batch_comments_corresponding_to_their_labels() - All input fields are visible in User Details Window
+[[32mINFO [m] 2022-11-25 00:37:31,554 BaseClass.admin_user_staff_is_on_user_detailswindow() - User Details window is displayed
+[[32mINFO [m] 2022-11-25 00:37:31,598 BaseClass.admin_user_staff_is_on_user_detailswindow() - User Details window is displayed
+[[32mINFO [m] 2022-11-25 00:37:31,637 BaseClass.admin_user_staff_is_on_manage_user_page() - User is in Manage User Page
+[[32mINFO [m] 2022-11-25 00:37:31,638 BaseClass.admin_user_staff_clicks_add_new_user_button() - clicking Add New user Button
+[[32mINFO [m] 2022-11-25 00:37:31,657 BaseClass.admin_user_staff_is_on_manage_user_page() - User is in Manage User Page
+[[32mINFO [m] 2022-11-25 00:37:31,751 BaseClass.admin_user_staff_is_on_manage_user_page() - User is in Manage User Page
+[[32mINFO [m] 2022-11-25 00:37:31,783 BaseClass.admin_user_staff_is_on_manage_user_page() - User is in Manage User Page
+[[32mINFO [m] 2022-11-25 00:37:31,805 BaseClass.admin_user_staff_is_on_manage_user_page() - User is in Manage User Page
+[[32mINFO [m] 2022-11-25 00:37:31,847 BaseClass.admin_user_staff_is_on_user_detailswindow() - User Details window is displayed
