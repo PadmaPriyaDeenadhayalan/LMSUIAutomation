@@ -34,8 +34,8 @@ Feature: Search
 @tag3
   Scenario: Verify the functionality of search
     Given Admin/User/Staff is on Manage user page
-    When Admin/User/Staff types Name to search
-    Then  Rows with the name should be displayed
+    When Admin/User/Staff types Name to "search"
+    Then  Rows with the "name" should be displayed
     
     @tag4
   Scenario: Verify the functionality of search

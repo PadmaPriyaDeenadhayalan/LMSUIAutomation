@@ -1,0 +1,7 @@
+bin/
+target/
+logs/
+/classes/
+build/
+.DS_Store
+*.class
