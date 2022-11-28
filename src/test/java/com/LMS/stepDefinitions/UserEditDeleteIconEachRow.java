@@ -2,23 +2,24 @@ package com.LMS.stepDefinitions;
 
 import java.util.List;
 
+import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserEditDeleteIconRow;
-import com.LMS.pageObjects.UserDelete;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserEditDeleteIconEachRow extends BaseClass{
+
+public class UserEditDeleteIconEachRow extends FeatureHelper{
 	
 	ReadConfig config = new ReadConfig();
 	String baseurl = config.getApplicationURL();
-	UserEditDeleteIconRow delete = new UserEditDeleteIconRow(driver);
-
+	User delete = new User(FeatureHelper.getDriver());
+	
 	@Then("Admin\\/User\\/Staff should see the buttons with edit\\/delete icon in each row of Edit\\/Delete column")
 	public void admin_user_staff_should_see_the_buttons_with_edit_delete_icon_in_each_row_of_edit_delete_column() {
 		

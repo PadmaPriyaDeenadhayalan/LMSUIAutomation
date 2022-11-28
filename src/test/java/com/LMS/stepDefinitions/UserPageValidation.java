@@ -4,19 +4,19 @@ import static org.junit.Assert.assertEquals;
 
 import org.testng.Assert;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserPageValidating;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserPageValidation extends BaseClass{
+public class UserPageValidation extends FeatureHelper{
 
 	ReadConfig config=new ReadConfig();
 	String baseurl=config.getApplicationURL();
-	UserPageValidating page = new UserPageValidating(driver);
+	User page = new User(FeatureHelper.getDriver());
 
 	@Given("Admin\\/User\\/Staff is on any page after Login")
 	public void admin_user_staff_is_on_any_page_after_login() {

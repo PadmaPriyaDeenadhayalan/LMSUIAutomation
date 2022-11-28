@@ -2,20 +2,19 @@ package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserDelete;
-import com.LMS.pageObjects.UserPaginationFunctionality;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserDeleteUser extends BaseClass {
+public class UserDeleteUser extends FeatureHelper {
 
 	ReadConfig config = new ReadConfig();
 	String baseurl = config.getApplicationURL();
-	UserDelete delete = new UserDelete(driver);
+	User delete = new User(FeatureHelper.getDriver());
 
 	@When("Admin\\/User\\/Staffis on the Manage user page after clicking User Tab")
 	public void admin_user_staffis_on_the_manage_user_page_after_clicking_user_tab() {

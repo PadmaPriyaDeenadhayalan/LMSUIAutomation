@@ -2,20 +2,19 @@ package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserPageValidating;
-import com.LMS.pageObjects.UserPaginationFunctionality;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserPagination extends BaseClass {
+public class UserPagination extends FeatureHelper {
 
 	ReadConfig config = new ReadConfig();
 	String baseurl = config.getApplicationURL();
-	UserPaginationFunctionality pagination = new UserPaginationFunctionality(driver);
+	User pagination = new User(FeatureHelper.getDriver());
 
 	@When("Admin\\/User\\/Staff is on the Manage user page after clicking User Tab")
 	public void admin_user_staff_is_on_the_manage_user_page_after_clicking_user_tab() {
@@ -207,9 +206,9 @@ if (noOfRows>=5) {
 	@Then("Admin\\/User\\/Staff should see the text {string} beow the user table.")
 	public void admin_user_staff_should_see_the_text_beow_the_user_table(String BelowTableText) {
 
-		String getBelowTableText1 = pagination.getBelowTableText();
-		if (getBelowTableText1 == BelowTableText) {
-			assertEquals(getBelowTableText1, BelowTableText);
+		String getBelowTableText = pagination.getBelowTableText();
+		if (getBelowTableText == BelowTableText) {
+			assertEquals(getBelowTableText, BelowTableText);
 			logger.info("Text is Visible");
 		} else {
 			

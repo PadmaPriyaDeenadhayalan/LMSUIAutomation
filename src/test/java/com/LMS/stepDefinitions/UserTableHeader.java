@@ -10,19 +10,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserTableHeaderFunctionality;
-import com.LMS.pageObjects.UserPaginationFunctionality;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserTableHeader extends BaseClass {
+public class UserTableHeader extends FeatureHelper {
 
 	ReadConfig config = new ReadConfig();
 	String baseurl = config.getApplicationURL();
-	UserTableHeaderFunctionality table = new UserTableHeaderFunctionality(driver);
+	User table = new User(FeatureHelper.getDriver());
 
 	@When("Admin\\/User\\/Staff is on the Manage user page after clicking User")
 	public void admin_user_staff_is_on_the_manage_user_page_after_clicking_user() {

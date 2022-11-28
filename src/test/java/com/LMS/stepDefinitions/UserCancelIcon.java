@@ -2,20 +2,19 @@ package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserPageValidating;
-import com.LMS.pageObjects.UserCancelIconFunctionality;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserCancelIcon extends BaseClass{
+public class UserCancelIcon extends FeatureHelper{
 
 	ReadConfig config=new ReadConfig();
 	String baseurl=config.getApplicationURL();
-	UserCancelIconFunctionality cancelIcon = new UserCancelIconFunctionality(driver);
+	User cancelIcon = new User(FeatureHelper.getDriver());
 	
 	@Then("Admin\\/User\\/Staff should see a cancel\\(x) icon")
 	public void admin_user_staff_should_see_a_cancel_x_icon() {
@@ -35,7 +34,7 @@ public class UserCancelIcon extends BaseClass{
 		String title = cancelIcon.getUserDetailsWindowTitle();
 	    if (title == "User Details")
 	    {
-	    	assertEquals("User Details", title);
+	    	assertEquals("User details", title);
 			logger.info("User is in User Details Page");
 	    }
 		else {

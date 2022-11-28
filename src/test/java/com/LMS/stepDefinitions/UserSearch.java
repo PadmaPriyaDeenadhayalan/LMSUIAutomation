@@ -2,19 +2,18 @@ package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserTableHeaderFunctionality;
-import com.LMS.pageObjects.UserSearchIcon;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserSearch extends BaseClass{
+public class UserSearch extends FeatureHelper{
 
 	ReadConfig config = new ReadConfig();
 	String baseurl = config.getApplicationURL();
-	UserSearchIcon search = new UserSearchIcon(driver);
+	User search = new User(FeatureHelper.getDriver());
 	
 	@Then("Admin\\/User\\/Staff see the Search Text box has text as Search.")
 	public void admin_user_staff_see_the_search_text_box_has_text_as_search() {
@@ -42,17 +41,17 @@ public class UserSearch extends BaseClass{
 		logger.info("Search text is visible");
 	}
 
-	@When("Admin\\/User\\/Staff types Name to search")
-	public void admin_user_staff_types_name_to_search(String searchText) {
+	@When("Admin\\/User\\/Staff types Name to {string}")
+	public void admin_user_staff_types_name_to(String text) {
 		
-		search.enterValidSearchTextBox(searchText);
+		search.enterValidSearchTextBox(text);
 		logger.info("Entering Valid Name in the Search input field");
 	}
 
-	@Then("Rows with the name should be displayed")
-	public void rows_with_the_name_should_be_displayed(String searchText) {
+	@Then("Rows with the {string} should be displayed")
+	public void rows_with_the_should_be_displayed(String text) {
 		
-		search.verifyNameContainsInManageUserList(searchText);
+		search.verifyNameContainsInManageUserList(text);
 		logger.info("Verify search text matching with Manager user name list.");
 	}
 

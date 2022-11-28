@@ -2,19 +2,18 @@ package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserAddNewUserFunc;
-import com.LMS.pageObjects.UserPaginationFunctionality;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserAddNewUserFunction extends BaseClass{
+public class UserAddNewUserFunction extends FeatureHelper{
 	
 	ReadConfig config = new ReadConfig();
 	String baseurl = config.getApplicationURL();
-	UserAddNewUserFunc addNewUser = new UserAddNewUserFunc(driver);
+	User addNewUser = new User(FeatureHelper.getDriver());
 
 	@Then("Admin\\/User\\/Staff should see the button with text {string}")
 	public void admin_user_staff_should_see_the_button_with_text(String addNewUserText) {

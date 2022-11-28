@@ -1,19 +1,18 @@
 package com.LMS.stepDefinitions;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserPageValidating;
-import com.LMS.pageObjects.UserSubmitButtonFunctionality;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserSubmitButton extends BaseClass{
+public class UserSubmitButton extends FeatureHelper{
 
 	ReadConfig config=new ReadConfig();
 	String baseurl=config.getApplicationURL();
-	UserSubmitButtonFunctionality submit = new UserSubmitButtonFunctionality(driver);
+	User submit = new User(FeatureHelper.getDriver());
 	
 	@Then("Admin\\/User\\/Staff should see a button with text as Submit in user details window")
 	public void admin_user_staff_should_see_a_button_with_text_as_submit_in_user_details_window() {
@@ -76,7 +75,7 @@ public class UserSubmitButton extends BaseClass{
 		logger.info("Entered Valid Values in the input fields");
 	}
 
-	@Then("Admin\\/User\\/Staff see Success message  New User Created  is  Should be Saved.")
+	@Then("Admin\\/User\\/Staff  see Success message  New User Created  is  Should be Saved.")
 	public void admin_user_staff_see_success_message_new_user_created_is_should_be_saved() {
 	    
 		submit.verifyNewUser();

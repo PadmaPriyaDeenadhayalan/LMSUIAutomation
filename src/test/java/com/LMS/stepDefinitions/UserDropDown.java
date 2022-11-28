@@ -1,18 +1,18 @@
 package com.LMS.stepDefinitions;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserDropDownFunctionality;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserDropDown extends BaseClass{
+public class UserDropDown extends FeatureHelper{
 
 	ReadConfig config=new ReadConfig();
 	String baseurl=config.getApplicationURL();
-	UserDropDownFunctionality dropDown = new UserDropDownFunctionality(driver);
+	User dropDown = new User(FeatureHelper.getDriver());
 	
 	@When("Admin\\/User\\/Staff clicks the drop down icon for state")
 	public void admin_user_staff_clicks_the_drop_down_icon_for_state() {

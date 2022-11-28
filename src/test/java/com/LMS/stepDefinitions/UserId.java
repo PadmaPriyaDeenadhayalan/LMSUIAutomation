@@ -1,18 +1,17 @@
 package com.LMS.stepDefinitions;
 
-import com.LMS.base.BaseClass;
-import com.LMS.pageObjects.UserIdFunctionality;
-import com.LMS.pageObjects.UserSearchIcon;
+import com.LMS.base.FeatureHelper;
+import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class UserId extends BaseClass{
+public class UserId extends FeatureHelper{
 
 	ReadConfig config = new ReadConfig();
 	String baseurl = config.getApplicationURL();
-	UserIdFunctionality userId = new UserIdFunctionality(driver);
+	User userId = new User(FeatureHelper.getDriver());
 	
 	
 	@When("Admin\\/User\\/Staff clicks ID in any row")
