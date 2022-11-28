@@ -7,12 +7,12 @@ package com.LMS.runner;
 
 	@RunWith(Cucumber.class)
 	
-	@CucumberOptions(features = {"./src/test/resources/Feature/User/cancelIcon.feature"}, 
-					glue = {"com.LMS.stepDefinitions" }, 
+	@CucumberOptions(features = {"./src/test/resources/Feature/Attendance"}, 
+					glue = {"com.LMS.stepDefinitions","com.LMS.pageObjects" }, 
 					monochrome = true, 
 					dryRun = false, 
 					plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-							"html:target/cucumber-reports/reports.html" }, 
+							"html:target/cucumber-reports/reports.html","timeline:test-output-thread/" }, 
 					publish = true)
 
 	public class Runner {

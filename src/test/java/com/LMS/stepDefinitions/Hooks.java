@@ -14,7 +14,7 @@ public class Hooks {
 	 @Before
 	    public static void setUp() {
 	     FeatureHelper featureHelper = new FeatureHelper();
-	     featureHelper.setUp(BrowserTypes.CHROME);
+//	     featureHelper.setUp(BrowserTypes.CHROME);
 	    }
 	 
 	    @After
