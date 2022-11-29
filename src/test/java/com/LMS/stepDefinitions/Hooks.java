@@ -11,10 +11,10 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class Hooks {
-	 @Before
+	    @Before
 	    public static void setUp() {
 	     FeatureHelper featureHelper = new FeatureHelper();
-//	     featureHelper.setUp(BrowserTypes.CHROME);
+        // featureHelper.setUp(BrowserTypes.CHROME);
 	    }
 	 
 	    @After

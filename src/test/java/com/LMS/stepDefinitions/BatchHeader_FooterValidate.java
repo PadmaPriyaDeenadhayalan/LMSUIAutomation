@@ -1,6 +1,6 @@
 package com.LMS.stepDefinitions;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +10,9 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.BatchPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BatchHeader_FooterValidate  {
 	public static final Logger logger = LogManager.getLogger(FeatureHelper.class.getName());
@@ -42,7 +44,7 @@ public class BatchHeader_FooterValidate  {
 		}
 	}
 
-		@Then("Admin\\/User\\/Staff see header text as {string}")
+		@Then("Admin\\/User\\/Staff seeing the header text as {string}")
 	public void admin_user_staff_see_header_text_as(String string) {
 		String Header = page.getHeader();
 	    if (Header == "Manage Batch")

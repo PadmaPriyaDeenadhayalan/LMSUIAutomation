@@ -28,5 +28,5 @@ Feature: Validate  Batch Add Newfunction
   @tag2
   Scenario: User/Staff Validate Add A New Batch button
   Given User/Staff is on Manage Batch page
-  When User/Staff Clicks on  " + A New Batch" button
+  When User/Staff Clicking on  " + A New Batch" button
   Then User/Staff see a Error message "Only Admin have Access" in the Ad NewProgram function

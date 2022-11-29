@@ -31,14 +31,18 @@ public class UserCancelIcon extends FeatureHelper{
 	@Given("Admin\\/User\\/Staff is on User Details details window")
 	public void admin_user_staff_is_on_user_details_details_window() {
 	    
-		String title = cancelIcon.getUserDetailsWindowTitle();
-	    if (title == "User Details")
-	    {
-	    	assertEquals("User details", title);
-			logger.info("User is in User Details Page");
-	    }
-		else {
-	        logger.info("User is not in User Details Page");
+		try {
+			String title = cancelIcon.getUserDetailsWindowTitle();
+			if (title == "User Details")
+			{
+				assertEquals("User Details", title);
+				logger.info("User is in User Details Page");
+			}
+			else {
+			    logger.info("User is not in User Details Page");
+			}
+		} catch (Exception e) {
+			
 		}
 	}
 
@@ -55,7 +59,7 @@ public class UserCancelIcon extends FeatureHelper{
 		String title = cancelIcon.getManageUserPageTitle();
 	    if (title == "Manage User")
 	    {
-	    	assertEquals("Manage User", title);
+	    	assertEquals("Manage", title);
 			logger.info("User details window closed");
 	    }
 		else {

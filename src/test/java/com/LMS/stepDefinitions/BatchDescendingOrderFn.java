@@ -7,7 +7,8 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.BatchPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BatchDescendingOrderFn  {
 	public static final Logger logger = LogManager.getLogger(FeatureHelper.class.getName());

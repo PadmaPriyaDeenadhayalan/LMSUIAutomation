@@ -21,7 +21,7 @@ Feature: Header,Footer and Paginator Validation
 
  @tag1
   Scenario: Validating the Attendance Header
-    Given Admin/User/Staff Logged on to LMS Website
+    Given Admin/User/Staff Logging on to LMS Website
     When Admin/User/Staff Clicks on Attendance button
     Then Admin/User/Staff see header text as Manage Attendance
 

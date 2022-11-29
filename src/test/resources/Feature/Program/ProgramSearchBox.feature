@@ -10,8 +10,8 @@ Feature: Search TextBox Functionality
 @tag1
   Scenario: Search by  Program Name
     Given Admin/User/Staff is on Manage Program page
-    When Admin/User/Staff enters Program Name to be searched
-    Then Entries for the searched Program Name are shown.
+    When Admin/User/Staff enters Programm Name to be searched
+    Then Entries for the search Program Name are shown.
 @tag2
   Scenario: Search by Program Description
     Given Admin/User/Staff is on Manage Program page

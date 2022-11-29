@@ -25,5 +25,5 @@ Background: Admin/User/Staff Logged on to LMS website
     Given Admin/User/Staff is on one page after Login
     When Admin/User/Staff clicks the Batch option
     Then Admin/User/Staff should see the Manage Batch page
-    Then Admin/User/Staff see header text as "Manage Batch "
+    Then Admin/User/Staff seeing the header text as "Manage Batch "
      Then Admin/User/Staff see Footer text as "In total there are 21 batches "

@@ -40,14 +40,14 @@ Delete multiple Batches at a time and confirm the delete function
     When Admin selects more than one Batch Name using checkbox
     And Admin Clicks on Enabled Delete button on the top left hand side
     Then Admin receives the confirmation Message as "Delete Confirm"
-    Then  Admin Clicks on Yes  button
+    Then  Admin Clicking on Yes  button
     And  Admin see Success message as "Program Deleted Succesfully"
    
   @tag4
    Scenario: Click on No button in Delete Confirm window
     Given Admin/User/Staff is on Manage Batch page
     When Admin selects more than one Batch Name using checkbox
-    And Admin Clicks on Enabled Delete button on the top left hand side
+    And Admin is Clicking on Enabled Delete button on the top left hand side
     Then Admin receives the confirmation Message as "Delete Confirm"
     Then  Admin Clicks on No  button
     And  Admin verify selected Program Names are not deleted
@@ -55,7 +55,7 @@ Delete multiple Batches at a time and confirm the delete function
    @tag5
    Scenario: Verify Deleted Batch Names
     Given Admin/User/Staff is on Manage Batch page
-    When Admin/User/Staff Enters deleted  Program Names in Search
+    When Admin/User/Staff Entering the deleted  Program Names in Search
    	Then Admin/User/Staff did not see the name on the Table.
    	
    	
@@ -63,8 +63,8 @@ Delete multiple Batches at a time and confirm the delete function
    Scenario: User/Staff Verify Deletion of Multiple Records
     Given Admin/User/Staff is on Manage Batch page
     When User/Staff selects more than one Batch  Name using checkbox
-    And User/Staff Cicks on Enabled Delete button on the top left hand side
-   	Then User/Staff see a Error message "Only Admin have Access"
+    And User/Staff Clicking on Enabled Delete button on the top left hand side
+   	Then User/Staff seeing a Error message "Only Admin have Access"
     
     
           

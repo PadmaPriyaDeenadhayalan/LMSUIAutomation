@@ -8,7 +8,8 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.ProgramPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class ProNoOfRow {
 	
