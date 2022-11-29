@@ -8,7 +8,9 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.BatchPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BatchValidateAddNewFunction {
 	public static final Logger logger = LogManager.getLogger(FeatureHelper.class.getName());
@@ -40,7 +42,7 @@ public class BatchValidateAddNewFunction {
 	 * Assert.assertEquals(title, titleOfProgram); }
 	 */
 
-	@When("User\\/Staff Clicks on  {string} button")
+	@When("User\\/Staff Clicking on  {string} button")
 	public void user_staff_clicks_on_button(String string) {
 	   VANFn.clicktAddNewBatch(); 
 	}

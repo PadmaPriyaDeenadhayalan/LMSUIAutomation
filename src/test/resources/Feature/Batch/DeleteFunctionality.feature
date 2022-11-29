@@ -31,16 +31,16 @@ Scenario: Verify Delete Functionality with Yes Select
     Given Admin Clicks on any Delete button located on the right side of specificRow 
     Then Admin see header text as "Delete Confirm" for verify No case
     Then Admin Clicks on No  button for delete functionality verification
-    Then Admin can see Program Name not deleted
+    Then Admin can see Proggram Names are not at all deleted
  
 @tag3
  Scenario: Validate Deleted Batch Name after delete by using RowDelete 
     Given  Admin/User/Staff is on Manage Batch page  
-    When Admin/User/Staff Enters deleted  Program Name in Search
+    When Admin/User/Staff Enters deleted  Proggram Names in Search
     Then Admin/User/Staff finds no results for verify Delete Funtionality
     
  @tag4    
     Scenario: User/Staff Validates Delete button
     Given User/Staff is on Manage Batch page 
-    When User/Staff Clicks on Delete buttton  
+    When User/Staff Clicks onn Deleete buttton  
     Then User/Staff see a Error message "Only Admin have Access" after validate Delete  button Function

@@ -2,7 +2,7 @@ package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
-import org.testng.Assert;
+import org.junit.Assert;
 
 import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.User;

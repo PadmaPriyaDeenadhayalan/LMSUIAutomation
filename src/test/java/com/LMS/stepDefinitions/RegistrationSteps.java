@@ -2,14 +2,15 @@ package com.LMS.stepDefinitions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.Assert;
-
+import org.junit.Assert;
 
 import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.RegistrationPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class RegistrationSteps{
 	

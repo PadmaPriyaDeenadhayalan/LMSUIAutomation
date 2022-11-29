@@ -7,7 +7,8 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.BatchPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BatchDeleteMultipleRecordFn  {
 	public static final Logger logger = LogManager.getLogger(FeatureHelper.class.getName());
@@ -43,8 +44,8 @@ public class BatchDeleteMultipleRecordFn  {
 	    MDFn.cilckRowCheckBoxs();
 	}
 
-	@When("Admin Clicks on Enabled Delete button on the top left hand side")
-	public void admin_clicks_on_enabled_delete_button_on_the_top_left_hand_side() {
+	@When("Admin is Clicking on Enabled Delete button on the top left hand side")
+	public void admin_is_clicking_on_enabled_delete_button_on_the_top_left_hand_side() {
 	   MDFn.clickMultipleDelete();
 	}
 
@@ -53,8 +54,8 @@ public class BatchDeleteMultipleRecordFn  {
 		logger.info(MDFn.getConfirmationMSg());
 	}
 
-	@Then("Admin Clicks on Yes  button")
-	public void admin_clicks_on_yes_button() {
+	@Then("Admin Clicking on Yes  button")
+	public void admin_clicking_on_yes_button() {
 	  MDFn.clickYesConfirm();
 	}
 
@@ -73,7 +74,7 @@ public class BatchDeleteMultipleRecordFn  {
 		logger.info("Admin see the Deleted name in seachBox");
 	}
 
-	@When("Admin\\/User\\/Staff Enters deleted  Program Names in Search")
+	@When("Admin\\/User\\/Staff Entering the deleted  Program Names in Search")
 	public void admin_user_staff_enters_deleted_program_names_in_search() {
 		logger.info("\"Admin\\\\/User\\\\/Staff enter the deleted program name on searchBox");
 	}
@@ -87,13 +88,13 @@ public class BatchDeleteMultipleRecordFn  {
 		 MDFn.clickCCheckBox();
 	}
 
-	@When("User\\/Staff Cicks on Enabled Delete button on the top left hand side")
-	public void user_staff_cicks_on_enabled_delete_button_on_the_top_left_hand_side() {
+	@When("User\\/Staff Clicking on Enabled Delete button on the top left hand side")
+	public void user_staff_clicking_on_enabled_delete_button_on_the_top_left_hand_side() {
 	   MDFn.clickMultipleDelete();
 	}
 
-	@Then("User\\/Staff see a Error message {string}")
-	public void user_staff_see_a_error_message(String string) {
+	@Then("User\\/Staff seeing a Error message {string}")
+	public void user_staff_seeing_a_error_message(String string) {
 		String ErrorMSg = "only Admin Access";
 		String ConfirmMSg =MDFn.getConfirmationMSg();
 		if (ErrorMSg.equalsIgnoreCase(ConfirmMSg)) {

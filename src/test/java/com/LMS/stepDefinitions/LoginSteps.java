@@ -2,15 +2,15 @@ package com.LMS.stepDefinitions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 //import com.LMS.base.BaseClass;
 import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.LoginPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class LoginSteps{
 	

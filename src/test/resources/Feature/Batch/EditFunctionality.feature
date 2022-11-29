@@ -38,7 +38,7 @@ Given Admin is on Manage Batch page
 When Admin Clicks Edit button for Edit Name 
 And Admin update the Name
 Then  Admin Clicks Save  button after update the Name
-Then Admin see Success message "Updated Name" for Name Update 
+Then Admin sshould see Success message "Updated Name" for Name Update 
 
 @tag3
 Scenario: Edit Description in Batch Details window
@@ -46,7 +46,7 @@ Given Admin is on Manage Batch page
 When Admin Clicks  Edit button for Edit Description
 And Admin select different Program Name By Scroll down
 Then  Admin Clicks  Save  button after update Description 
-Then Admin see Success message"Updated Description" for Description Update
+Then Admin should see Success message"Updated Description" for Description Update
 
 @tag4
 Scenario: Edit Program Name from Dropdown in Batch Details window
@@ -54,7 +54,7 @@ Given Admin is on Manage Batch page
 When Admin Clicks  Edit button for Edit Program Name
 And Admin update the Description
 Then  Admin Clicks Save  button after update Program Name
-Then Admin see Success message "Updated Program Name" for Programname Update
+Then Admin seeing Success message "Updated Program Name" for Programname Update
 
 @tag5
 Scenario: Edit Status in Batch Details window
@@ -62,14 +62,14 @@ Given Admin is on Manage Batch page
 When Admin Clicks  Edit button for Edit Status 
 And Admin update the Status
 Then  Admin Clicks Save  button after update  Status 
-Then Admin see Success message "Updated Status" for Status Update
+Then Admin see Success mmessage "Updated Status" for Status Update
 @tag6
 Scenario: Edit Number Of Classes in Batch Details window
 Given Admin is on Manage Batch page
 When Admin Clicks Edit button for Edit Number Of Classes
 And Admin update No Of Classes
 Then Admin Clicks Save  button after update Number Of Classes
-Then Admin see Success message "Updated No of Classes" for Class Update
+Then Adminn see Success message "Updated No of Classes" for Class Update
 
 @tag7
 Scenario: Click on Cancel button in Batch Details window

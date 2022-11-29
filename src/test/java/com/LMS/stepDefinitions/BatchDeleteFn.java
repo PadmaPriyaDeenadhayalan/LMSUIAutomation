@@ -9,7 +9,8 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.BatchPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BatchDeleteFn{
 	public static final Logger logger = LogManager.getLogger(FeatureHelper.class.getName());
@@ -56,13 +57,13 @@ public class BatchDeleteFn{
 		
 	}
 
-	@Then("Admin can see Program Name not deleted")
-	public void admin_can_see_program_name_not_deleted() {
+	@Then("Admin can see Proggram Names are not at all deleted")
+	public void admin_can_see_proggram_names_are_not_at_all_deleted() {
 		logger.info("Admin view confirmationWindow is closed");
 	}
 	
-	@When("Admin\\/User\\/Staff Enters deleted  Program Name in Search")
-	public void admin_user_staff_enters_deleted_program_name_in_search() {
+	@When("Admin\\/User\\/Staff Enters deleted  Proggram Names in Search")
+	public void admin_user_staff_enters_deleted_proggram_names_in_search() {
 		logger.info("Admin\\\\/User\\\\/Staff enter the Deleted name in seachBox");
 	}
 
@@ -71,7 +72,7 @@ public class BatchDeleteFn{
 		logger.info("\"Admin\\\\/User\\\\/Staff not see the deleted program name on the table");
 	}
 
-	@When("User\\/Staff Clicks on Delete buttton")
+	@When("User\\/Staff Clicks onn Deleete buttton")
 	public void user_staff_clicks_on_delete_buttton() {
 	    BDFn.clickDelete1();
 	}

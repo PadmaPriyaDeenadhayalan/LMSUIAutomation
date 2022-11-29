@@ -22,33 +22,33 @@ Background: Admin/User/Staff Logged on to LMS Website
 
 @tag1
   Scenario: Validating the Manage Batch Paginator
-    Given Admin/User/Staff Logged on to LMS Website 
+    Given Admin/User/Staff Logged on to LMS Webbsite 
     When Admin/User/Staff is on Manage Batch page
-    Then  Admin/User/Staff  see the text as "Showing 1 to 5 of 21 batches." 
+    Then  Admin/User/Staff  see the texxt as "Showing 1 to 5 of 21 batches." 
 
   @tag2
   Scenario: Verify paginatornext button  on the Batch page
     Given  Admin/User/Staff is on Manage Batch page for search
-    When Admin/User/Staff Clicks on Enabled paginatornext button
-    Then  Admin/User/Staff see Paginator text as "Showing 6 to 10 of 21 batches."
+    When Admin/User/Staff Clicking on Enabled paginator next button
+    Then  Admin/User/Staff seeing Paginator text as "Showing 6 to 10 of 21 batches."
     
     @tag3
   Scenario: Verify paginatorprevoius button on the Batch page 
     Given  Admin/User/Staff is on Manage Batch page for search
-    When Admin/User/Staff Clicks on Enabled paginatorprev button
+    When Admin/User/Staff Clicks on Enaabled paginator prev button
     Then Admin/User/Staff  see the text as "Showing 1 to 5 of 21 batches." 
     
     @tag4
   Scenario: Verify paginatorlast button on the Batch page 
     Given  Admin/User/Staff is on Manage Batch page for search
-    When Admin/User/Staff Clicks on Enabled paginatorlast button
-    Then  Admin/User/Staff see Page number navigated to '5'
+    When Admin/User/Staff Clicks on Enabled paginator last button
+    Then  Admin/Useer/Staff see Page number navigated to '5'
     
         
     @tag5
   Scenario: Verify paginatorfirst button on the Batch page 
     Given Admin/User/Staff is on Manage Batch page for search
-    When Admin/User/Staff Clicks on Enabled paginatorfirst button
+    When Admin/User/Staff Clicks on Enabled paginaator first button
     Then Admin/User/Staff see Pagenavigated to '1'
 
    

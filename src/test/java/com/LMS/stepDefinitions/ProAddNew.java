@@ -1,6 +1,6 @@
 package com.LMS.stepDefinitions;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,7 +9,9 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.ProgramPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class ProAddNew{
 	
@@ -30,8 +32,8 @@ public void admin_clicks_on_the_button(String string) {
     
 }
 
-@Then("Admin see header text as {string}")
-public void admin_see_header_text_as(String string) {
+@Then("Admin should see header text as {string}")
+public void admin_should_see_header_text_as(String string) {
 	String title = addNewProgram.proDetailsHeader();
 	 
 	if (title == "Program Details")
@@ -59,8 +61,8 @@ public void admin_clicks_on_save_button_with_out_entering_details() {
    logger.info("Admin Clicks on Save Button with out entering  details");
 }
 
-@Then("Admin see Error message {string}")
-public void admin_see_error_message(String string) {
+@Then("Admin see Error messssage {string}")
+public void admin_see_error_messssage(String string) {
 	logger.info("Admin see Error message Name is required");
    
 }
@@ -77,8 +79,8 @@ public void admin_clicks_on_save_button_after_entering_all_details() {
 	 logger.info("Admin Clicks on Save Button after entering all details");
 }
 
-@Then("Admin see Success message {string}")
-public void admin_see_success_message(String string) {
+@Then("Admin see Success messssage {string}")
+public void admin_see_success_messssage(String string) {
 	addNewProgram.getSuccessBox();
 	logger.info("Admin see Success message New Program Created");
     
@@ -109,8 +111,8 @@ public void admin_clicks_on_button(String string) {
  logger.info("Admin Clicks on A New Program button");
 }
 
-@When("Admin Clicks on Cancel button")
-public void admin_clicks_on_cancel_button() {
+@When("Admin Clicking on Cancel button")
+public void admin_clicking_on_cancel_button() {
 	addNewProgram.Cancelbutton();
 	logger.info("Admin Clicks on Cancel button");
    

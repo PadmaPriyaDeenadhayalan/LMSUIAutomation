@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
  <dependencies>
@@ -40,13 +40,7 @@
     <version>5.0.4</version>
 </dependency>
 
-		
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>7.7.0</version>
-</dependency>
+	
 
 <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
 <dependency>
@@ -98,13 +92,7 @@
     <version>1.9.1</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.6.1</version>
-    <scope>test</scope>
-</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
@@ -166,11 +154,12 @@
     <version>5.3.1</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
 <dependency>
     <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-testng</artifactId>
+    <artifactId>allure-junit4</artifactId>
     <version>2.19.0</version>
+    <scope>test</scope>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
@@ -217,6 +206,15 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+               <testFailureIgnore>true</testFailureIgnore>
+                <includes>
+                  <include>**/RunnerTest.java</include>
+                </includes>
+                <parallel>suites</parallel>
+                <threadCount>10</threadCount>
+                <perCoreThreadCount>true</perCoreThreadCount>
+              </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -234,10 +232,12 @@
             <execution>
               <goals>
                 <goal>integration-test</goal>
+                <goal>verify</goal>
+                
               </goals>
               <configuration>
                 <includes>
-                  <include>**/Runner.java</include>
+                  <include>**/RunnerTest.java</include>
                 </includes>
                 <parallel>methods</parallel>
                 <threadCount>6</threadCount>

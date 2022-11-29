@@ -3,12 +3,13 @@ package com.LMS.stepDefinitions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.ProgramPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class ProSearchBox  {
 	
@@ -34,15 +35,15 @@ public class ProSearchBox  {
 	   logger.info("Admin/User/Staff see the Search Text box has text as {string}");
 	}
 
-	@When("Admin\\/User\\/Staff enters Program Name to be searched")
-	public void admin_user_staff_enters_program_name_to_be_searched() {
+	@When("Admin\\/User\\/Staff enters Programm Name to be searched")
+	public void admin_user_staff_enters_programm_name_to_be_searched() {
 		search.EnterSearch("Program Name");
 		logger.info("Admin/User/Staff enters Program Name to be searched");
 	   
 	}
 
-	@Then("Entries for the searched Program Name are shown.")
-	public void entries_for_the_searched_program_name_are_shown() {
+	@Then("Entries for the search Program Name are shown.")
+	public void entries_for_the_search_program_name_are_shown() {
 	   logger.info("Entries for the searched Program Name are shown.");
 	}
 

@@ -6,10 +6,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.LMS.base.FeatureHelper;
-import com.LMS.pageObjects.*;
+import com.LMS.pageObjects.BatchPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BatchAscendingOrderFn  {
 	public static final Logger logger = LogManager.getLogger(FeatureHelper.class.getName());

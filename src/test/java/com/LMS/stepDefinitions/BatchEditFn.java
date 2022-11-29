@@ -1,17 +1,19 @@
 package com.LMS.stepDefinitions;
 
-import static org.testng.Assert.assertEquals;
+
+import static org.junit.Assert.assertEquals;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 
 import com.LMS.base.FeatureHelper;
-
 import com.LMS.pageObjects.BatchPage;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BatchEditFn  {
 	public static final Logger logger = LogManager.getLogger(FeatureHelper.class.getName());
@@ -62,8 +64,8 @@ public class BatchEditFn  {
 	public void admin_clicks_save_button_after_updte_the_name() {
 	    BEFn.clickSave();
 	}
-	@Then("Admin see Success message {string} for Name Update")
-	public void admin_see_success_message_for_name_update(String string) {
+	@Then("Admin sshould see Success message {string} for Name Update")
+	public void admin_sshould_see_success_message_for_name_update(String string) {
 		String SuccessMsg = "Name is updated";
 		String SuggestionMSg =BEFn.getSuggestionBox();
 		if (SuccessMsg.equalsIgnoreCase(SuggestionMSg)) {
@@ -94,8 +96,8 @@ public class BatchEditFn  {
 		  BEFn.clickSave();
 	}
 	
-	@Then("Admin see Success message\"Updated Description\" for Description Update")
-	public void admin_see_success_message_updated_description_for_description_update() {
+	@Then("Admin should see Success message\"Updated Description\" for Description Update")
+	public void admin_should_see_success_message_updated_description_for_description_update() {
 		String SuccessMsg = "Batch Description is updated";
 		String SuggestionMSg =BEFn.getSuggestionBox();
 		if (SuccessMsg.equalsIgnoreCase(SuggestionMSg)) {
@@ -118,8 +120,8 @@ public class BatchEditFn  {
 	public void admin_clicks_save_button_after_update_program_name() {
 		BEFn.clickSave(); 
 	}
-	@Then("Admin see Success message {string} for Programname Update")
-	public void admin_see_success_message_for_programname_update(String string) {
+	@Then("Admin seeing Success message {string} for Programname Update")
+	public void admin_seeing_success_message_for_programname_update(String string) {
 		String SuccessMsg = "ProgramName is updated";
 		String SuggestionMSg =BEFn.getSuggestionBox();
 		if (SuccessMsg.equalsIgnoreCase(SuggestionMSg)) {
@@ -141,8 +143,8 @@ public class BatchEditFn  {
 		BEFn.clickSave(); 
 	}
 	
-	@Then("Admin see Success message {string} for Status Update")
-	public void admin_see_success_message_for_status_update(String string) {
+	@Then("Admin see Success mmessage {string} for Status Update")
+	public void admin_see_success_mmessage_for_status_update(String string) {
 		String SuccessMsg = "Status is updated";
 		String SuggestionMSg =BEFn.getSuggestionBox();
 		if (SuccessMsg.equalsIgnoreCase(SuggestionMSg)) {
@@ -165,8 +167,8 @@ public class BatchEditFn  {
 		BEFn.clickSave(); 
 	}
 	
-	@Then("Admin see Success message {string} for Class Update")
-	public void admin_see_success_message_for_class_update(String string) {
+	@Then("Adminn see Success message {string} for Class Update")
+	public void adminn_see_success_message_for_class_update(String string) {
 		String SuccessMsg = "Class is updated";
 		String SuggestionMSg =BEFn.getSuggestionBox();
 		if (SuccessMsg.equalsIgnoreCase(SuggestionMSg)) {

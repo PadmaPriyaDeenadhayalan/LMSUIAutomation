@@ -6,7 +6,9 @@ import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.Attendance;
 import com.LMS.utilities.ReadConfig;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class AttendanceHeaderFooterPaginator extends FeatureHelper{
 
@@ -14,8 +16,8 @@ public class AttendanceHeaderFooterPaginator extends FeatureHelper{
 	String baseurl = config.getApplicationURL();
 	Attendance attendance = new Attendance(FeatureHelper.getDriver());
 	
-	@Given("Admin\\/User\\/Staff Logged on to LMS Website")
-	public void admin_user_staff_logged_on_to_lms_website() {
+	@Given("Admin\\/User\\/Staff Logging on to LMS Website")
+	public void admin_user_staff_logging_on_to_lms_website() {
 	    
 		String title = attendance.getManageProgramPageTitle();
 		if (title == "Manage Program") {
