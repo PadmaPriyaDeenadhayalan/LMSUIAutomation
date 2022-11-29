@@ -1,6 +1,7 @@
 package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.User;
@@ -59,12 +60,14 @@ public class UserCancelIcon extends FeatureHelper{
 		String title = cancelIcon.getManageUserPageTitle();
 	    if (title == "Manage User")
 	    {
-	    	assertEquals("Manage", title);
+	    	assertEquals("Manage User", title);
+	    	
 			logger.info("User details window closed");
 	    }
 		else {
 	        logger.info("User details window is not closed");
 		}
+	    assertTrue(false);
 	}
 
 
