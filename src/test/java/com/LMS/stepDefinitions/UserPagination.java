@@ -1,7 +1,7 @@
 package com.LMS.stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+
 import com.LMS.base.FeatureHelper;
 import com.LMS.pageObjects.User;
 import com.LMS.utilities.ReadConfig;

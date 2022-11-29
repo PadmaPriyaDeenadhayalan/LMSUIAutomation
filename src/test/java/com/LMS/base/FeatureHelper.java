@@ -63,7 +63,7 @@ public class FeatureHelper {
 
 	public static void tearDown() {
 		if (Objects.nonNull(driver)) {
-			driver.quit();
+			driver.close();
 		}
 	}
 
